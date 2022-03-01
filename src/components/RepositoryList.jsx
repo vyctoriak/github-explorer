@@ -1,4 +1,10 @@
-const repositoryName = 'Unform'
+import { RepositoryItem } from "./RepositoryItem";
+
+const repository = {
+  name: 'Unform22',
+  description: 'Example of a repository description',
+  link: 'https://www.github.com/unform/unform'
+}
 
 export function RepositoryList() {
   return (
@@ -6,32 +12,9 @@ export function RepositoryList() {
       <h1>Repository List</h1>
 
       <ul>
-        <li>
-          <strong>{repositoryName}</strong>
-          <p>Repository description</p>
-
-          <a href="#">
-            Access Repository
-          </a>
-        </li>
-
-        <li>
-          <strong>{repositoryName}</strong>
-          <p>Repository description</p>
-
-          <a href="#">
-            Access Repository
-          </a>
-        </li>
-
-        <li>
-          <strong>{repositoryName}</strong>
-          <p>Repository description</p>
-
-          <a href="#">
-            Access Repository
-          </a>
-        </li>
+        <RepositoryItem 
+          repository={repository}
+        />
       </ul>
     </section>
   );
